@@ -5,6 +5,7 @@ message("")
 set(MOAB_SEARCH_DIRS)
 file(GLOB MOAB_SEARCH_DIRS ${MOAB_SEARCH_DIRS} "${MOAB_DIR}/lib*/cmake/MOAB")
 string(REPLACE "\n" ";" MOAB_SEARCH_DIRS "${MOAB_SEARCH_DIRS}")
+message(STATUS "MOAB search directories: ${MOAB_SEARCH_DIRS}")
 find_path(MOAB_CMAKE_CONFIG
   NAMES MOABConfig.cmake
   PATHS ${MOAB_SEARCH_DIRS}
